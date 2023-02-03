@@ -24,10 +24,8 @@ loop(
 // → 3
 // → 2
 // → 1
-
 //3-3
 //3-4
-
 function everyLoop(array, test) {
   for (let item of array) {
     if (test(item) === false) {
