@@ -29,11 +29,18 @@ loop(
 //3-4
 
 function everyLoop(array, test) {
-  // Your code here.
+  for (let item of array) {
+    if (test(item) === false) {
+      return false;
+    }
+  }
+  return true;
 }
 
 function everySome(array, test) {
-  // Your code here.
+  return !array.some(function (element) {
+    return !test(element);
+  });
 }
 
 console.log(everyLoop([1, 3, 5], (n) => n < 10));
